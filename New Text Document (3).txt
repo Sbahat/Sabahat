@@ -1,0 +1,57 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaapplication14;
+
+/**
+ *
+ * @author lab-a19
+ */
+public class Student {
+    private int rollno;
+    private String name;
+    private int marks;
+    Student(int rollno,String name,int marks){
+        this.rollno=rollno;
+        this.name=name;
+        this.marks=marks;
+        setMarks(marks);
+    }
+    public int getRollNo(){
+        return(rollno);
+    }
+    public String getName(){
+        return(name);
+        
+    }
+    public int getMarks(){
+        return(marks);
+    }
+
+    private void setMarks(int marks) {
+        if(marks>=85){
+            System.out.println("Grade A with marks and %GPA4.0"+marks);
+        }
+        else if(marks >=80 && marks<85){
+                       System.out.println("Grade A- with marks and %GPA3.7"+marks);
+                      
+        }
+        else if(marks>=75 && marks<80){
+            System.out.println("Grade B+ with marks and %GPA3.3"+marks);            
+        }
+        else if(marks>=70 && marks<70){
+                        System.out.println("Grade B with marks and %GPA3.0"+marks);
+        }
+        else if(marks>=65 && marks<70){
+                        System.out.println("Grade C- with marks and %GPA2.5"+marks);
+        }
+        else if(marks>=60 && marks<65){
+                        System.out.println("Grade C with marks and %GPA2.5"+marks);
+        }else {
+                        System.out.println("Grade F with marks and %0"+marks);
+        }
+    }
+    
+}
